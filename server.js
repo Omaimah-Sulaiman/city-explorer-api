@@ -11,6 +11,7 @@ const cors = require('cors');
 server.use(cors());
 
 const getWeather = require('./controller/Forecast.controller');
+const getMovies = require('./controller/Movies.controller');
 
 
 
@@ -20,5 +21,6 @@ server.get('/', (req, res) => {
 });
 server.get('/weather', getWeather);
 
+server.get('/movies', getMovies);
 
 server.listen(PORT, () => console.log(`listening on ${PORT}`));
